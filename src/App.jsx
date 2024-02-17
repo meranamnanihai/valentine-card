@@ -12,7 +12,9 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-500 to-red-500 p-5">
+    <>
+    
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-500 to-red-500 p-5 ">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md">
         <h1 className="text-4xl font-bold text-center mb-6 text-gray-800">Welcome to Our Love Story</h1>
         {!isSubmitted ? (
@@ -60,10 +62,12 @@ const Home = () => {
 
         )}
       </div>
-      <footer className="bg-gray-800 py-4 text-white text-center">
+      
+    </div>
+    <footer className="bg-gray-800 py-4 text-white text-center">
       <p>Made by Admya Salar 🗿</p>
       </footer>
-    </div>
+    </>
   );
 };
 
