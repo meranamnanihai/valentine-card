@@ -36,6 +36,7 @@ const ValentineCard = () => {
               <p className="mb-4">my heart beats for you, Dear {patnername}</p>
               <p className="mb-4">and I'm grateful for every moment with you.</p>
               <p className="mb-4">I love you more than words can express.</p>
+              <p className="mb-4">Will you marry me {patnername}</p>
               <p className="font-semibold">Forever yours,</p>
               <p className="font-semibold">{yourname}</p>
             </motion.div>
