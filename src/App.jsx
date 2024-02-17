@@ -60,6 +60,9 @@ const Home = () => {
 
         )}
       </div>
+      <footer className="bg-gray-800 py-4 text-white text-center">
+      <p>Made by Admya Salar 🗿</p>
+      </footer>
     </div>
   );
 };
