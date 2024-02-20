@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useParams } from 'react-router-dom';
+import Fallback from './fallback'
 const ValentineCard = () => {
   const params = useParams();
+  
   const [isOpen, setIsOpen] = useState(false);
   const patnername = params.name.split('$')[0];
   const yourname = params.name.split('$')[1];
+  if(patnername == 'admya' || patnername == 'Admya' || yourname == 'admya' || yourname == 'Admya'){
+    return <Fallback></Fallback>
+  }
   return (
     <div className="min-h-screen flex items-center justify-center bg-pink-100">
       <button
@@ -37,6 +42,7 @@ const ValentineCard = () => {
               <p className="mb-4">and I'm grateful for every moment with you.</p>
               <p className="mb-4">I love you more than words can express.</p>
               <p className="mb-4">Will you marry me {patnername}</p>
+            
               <p className="font-semibold">Forever yours,</p>
               <p className="font-semibold">{yourname}</p>
             </motion.div>

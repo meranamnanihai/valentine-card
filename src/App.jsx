@@ -56,7 +56,7 @@ const Home = () => {
             <p className="mb-4">Partner's Name: {partnerName}</p>
             <p className="mb-4">Ready to create the card!</p>
            <Link to={`/${partnerName}$ ${yourName}`}>
-            <button class="bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Button</button>
+            <button class="bg-transparent hover:bg-pink-500 text-pink-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Generate Card</button>
             </Link>
           </div>
 
