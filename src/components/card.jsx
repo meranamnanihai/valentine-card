@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useParams } from 'react-router-dom';
 import Fallback from './fallback'
+function removeNumbersFromString(str) {
+  return str.replace(/\d+/g, '');
+}
 const ValentineCard =  () => {
   const params = useParams();
   
   const [isOpen, setIsOpen] = useState(false);
-  const patnername = params.name.split('$')[0];
-  const yourname = params.name.split('$')[1];
-  
-  if ((patnername.toLowerCase() === 'admya') || (yourname.toLowerCase() === 'admya')) {
+  let patnername = params.name.split('$')[0];
+  let yourname = params.name.split('$')[1];
+  patnername = removeNumbersFromString(patnername);
+  yourname = removeNumbersFromString(yourname);
+  if ((patnername.toLowerCase().trim().slice(0,5) === 'admya') || (yourname.toLowerCase().trim().slice(0,5) === 'admya')) {
     return <Fallback />;
   }
   else{
